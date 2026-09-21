@@ -1,0 +1,21 @@
+name: Second WorkFlow
+on: push
+
+jobs:
+    run-firts-commmand:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display Node Version Ubuntu
+              run: node -v
+    run-parallel-command:
+        runs-on: windows-latest
+        steps:
+            - name: Display Node Version Windows
+              run: node -v
+    run-second-command:
+        runs-on: macos-latest
+        needs: run-firts-commmand
+        steps:
+            - name: Display Node Version MacOS
+              run: node -v 
+              

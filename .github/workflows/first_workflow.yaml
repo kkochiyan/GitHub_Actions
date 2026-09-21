@@ -7,3 +7,7 @@ jobs:
         steps:
             - name: Dispaly some text 
               run: echo "Hello, World!"
+            - name: Command in Multi-line
+              run: |
+                node -v 
+                npm -v
